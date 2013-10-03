@@ -85,16 +85,16 @@ data Factor
 
 --------------------------------------------------------------------------------
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_allocate_common"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_allocate_common"
    common_allocate :: IO (Ptr Common)
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_free_common"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_free_common"
    common_free :: Ptr Common -> IO ()
 
-foreign import ccall unsafe "cholmod_xface.h &cholmod_free_common"
+foreign import ccall unsafe "cholmod_xface.h &cholmodx_free_common"
    common_free_ptr :: FunPtr (Ptr Common -> IO ())
 
-foreign import ccall unsafe "cholmod_xface.h &cholmod_common_finish_and_free"
+foreign import ccall unsafe "cholmod_xface.h &cholmodx_common_finish_and_free"
         common_finish_and_free_ptr ::  FunPtr (Ptr Common -> IO ())
 
 foreign import ccall unsafe "cholmod.h cholmod_start"
@@ -113,10 +113,10 @@ foreign import ccall unsafe "cholmod.h cholmod_allocate_triplet"
                      -> Ptr Common
                      -> IO (Ptr Triplet)
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_free_xface"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_free_xface"
     triplet_free :: Ptr Triplet -> Ptr Common -> IO CInt
 
-foreign import ccall unsafe "cholmod_xface.h &cholmod_triplet_free_void"
+foreign import ccall unsafe "cholmod_xface.h &cholmodx_triplet_free_void"
     triplet_free_ptr :: FunPtr (Ptr Common -> Ptr Triplet -> IO ())
 
 
@@ -153,42 +153,42 @@ foreign import ccall unsafe "cholmod.h cholmod_sparse_to_dense"
 
 --------------------------------------------------------------------------------
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_get_nrow"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_get_nrow"
     triplet_get_nrow :: (Ptr Triplet) -> IO CSize
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_get_ncol"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_get_ncol"
     triplet_get_ncol :: (Ptr Triplet) -> IO CSize
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_get_nzmax"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_get_nzmax"
     triplet_get_nzmax :: (Ptr Triplet) -> IO CSize
     
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_get_nnz"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_get_nnz"
     triplet_get_nnz :: (Ptr Triplet) -> IO CSize
     
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_get_row_indices"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_get_row_indices"
     triplet_get_row_indices :: (Ptr Triplet) -> IO (Ptr CInt)
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_get_column_indices"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_get_column_indices"
     triplet_get_col_indices :: (Ptr Triplet) -> IO (Ptr CInt)
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_get_x"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_get_x"
     triplet_get_x :: (Ptr Triplet) -> IO (Ptr CDouble)
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_triplet_set_nnz"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_triplet_set_nnz"
     triplet_set_nnz :: Ptr Triplet -> CSize -> IO ()
 
 --------------------------------------------------------------------------------
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_dense_get_nrow"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_dense_get_nrow"
     dense_get_nrow :: (Ptr Dense) -> IO CSize
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_dense_get_ncol"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_dense_get_ncol"
     dense_get_ncol :: (Ptr Dense) -> IO CSize
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_dense_get_nzmax"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_dense_get_nzmax"
     dense_get_nzmax :: (Ptr Dense) -> IO CSize
     
-foreign import ccall unsafe "cholmod_xface.h cholmod_dense_get_x"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_dense_get_x"
     dense_get_x :: (Ptr Dense) -> IO (Ptr CDouble)
 
 foreign import ccall unsafe "cholmod.h cholmod_copy_dense"
@@ -197,42 +197,42 @@ foreign import ccall unsafe "cholmod.h cholmod_copy_dense"
 foreign import ccall unsafe "cholmod.h cholmod_norm_dense"
     dense_norm :: Ptr Dense -> NormType -> Ptr Common -> IO CDouble
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_dense_free_xface"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_dense_free_xface"
     dense_free :: Ptr Dense -> Ptr Common -> IO CInt
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_allocate_dense"
+foreign import ccall unsafe "cholmod.h cholmod_allocate_dense"
     dense_allocate :: CSize -> CSize -> CSize -> XType -> Ptr Common
                    -> IO (Ptr Dense)
 
-foreign import ccall unsafe "cholmod_xface.h &cholmod_dense_free_void"
+foreign import ccall unsafe "cholmod_xface.h &cholmodx_dense_free_void"
     dense_free_ptr :: FunPtr (Ptr Common -> Ptr Dense -> IO ())
 
 --------------------------------------------------------------------------------
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_sparse_get_nrow"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_sparse_get_nrow"
     sparse_get_nrow :: (Ptr Sparse) -> IO CSize
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_sparse_get_ncol"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_sparse_get_ncol"
     sparse_get_ncol :: (Ptr Sparse) -> IO CSize
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_sparse_get_nzmax"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_sparse_get_nzmax"
     sparse_get_nzmax :: (Ptr Sparse) -> IO CSize
     
-foreign import ccall unsafe "cholmod_xface.h cholmod_sparse_get_x"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_sparse_get_x"
     sparse_get_x :: (Ptr Sparse) -> IO (Ptr CDouble)
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_sparse_free_xface"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_sparse_free_xface"
     sparse_free :: Ptr Sparse -> Ptr Common -> IO CInt
 
-foreign import ccall unsafe "cholmod_xface.h &cholmod_sparse_free_void"
+foreign import ccall unsafe "cholmod_xface.h &cholmodx_sparse_free_void"
     sparse_free_ptr :: FunPtr (Ptr Common -> Ptr Sparse -> IO ())
 
 --------------------------------------------------------------------------------
 
-foreign import ccall unsafe "cholmod_xface.h cholmod_factor_free_xface"
+foreign import ccall unsafe "cholmod_xface.h cholmodx_factor_free_xface"
     factor_free :: Ptr Factor -> Ptr Common -> IO CInt
 
-foreign import ccall unsafe "cholmod_xface.h &cholmod_factor_free_void"
+foreign import ccall unsafe "cholmod_xface.h &cholmodx_factor_free_void"
     factor_free_ptr :: FunPtr (Ptr Common -> Ptr Factor -> IO ())
 
 
