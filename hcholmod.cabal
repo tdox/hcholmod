@@ -1,0 +1,65 @@
+name:                hcholmod
+version:             0.1.0.0
+synopsis:            Foreign Function Interface (FFI) to CHOLMOD, a supernodal
+                     sparse Cholesky factorization library
+-- description:         
+homepage:            www.github.com/tdox/hcholmod
+license:             MIT
+license-file:        LICENSE
+author:              Tad Doxsee
+maintainer:          doxsee@pacbell.net
+stability:           experimental
+copyright:           (c) 2010 - 2013 Tad Doxsee
+category:            Math
+build-type:          Simple
+cabal-version:       >= 1.8
+
+extra-source-files:    lib/Numeric/LinearAlgebra/CHOLMOD/cholmod_xface.h
+                     , lib/Numeric/LinearAlgebra/CHOLMOD/cholmod_xface.c
+                     , examples/example1.hs
+
+
+library
+  exposed-modules:     Numeric.LinearAlgebra.CHOLMOD.CholmodXFace
+                     , Numeric.LinearAlgebra.CHOLMOD.CholmodXFaceLow
+
+  hs-source-dirs:      lib
+
+  c-sources:           lib/Numeric/LinearAlgebra/CHOLMOD/cholmod_xface.c
+
+  ghc-options:         -Wall
+
+  -- other-modules:       
+  build-depends:       base   >= 4.5.1.0
+                     , vector >= 0.10.0.1
+
+
+--executable example1
+--  main-is:             examples/example1.hs
+
+--  ghc-options:         -Wall -v
+
+--  ld-options:         -lcholmod_xface
+
+--  extra-lib-dirs:      /usr/local/lib:/home/tad/code/haskell/hcholmod/dist/build/lib/Numeric/LinearAlgebra/CHOLMOD
+
+--  extra-lib-dirs:      /usr/local/lib
+--                     , /home/tad/code/haskell/hcholmod/dist/build/lib/Numeric/LinearAlgebra/CHOLMOD
+
+--  extra-include-dirs:  /usr/local/lib
+
+--  extra-libraries:     cholmod
+--                     , amd
+--                     , colamd
+--                     , suitesparseconfig
+--                    , metis
+--                     , ccolamd
+--                     , camd
+--                     , lapack
+--                     , blas
+--                     , cholmod_xface
+
+--  build-depends:       base      >= 4.5.1.0
+--                     , hcholmod  >= 0.1.0.0
+--                     , vector    >= 0.10.0.1
+

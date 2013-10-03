@@ -1,0 +1,1 @@
+:set -Wall -L/home/tad/code/haskell/cholmod/Numeric/LinearAlgebra/CHOLMOD -lcholmod_xface

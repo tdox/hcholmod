@@ -1,0 +1,78 @@
+Glasgow Haskell Compiler, Version 7.4.2, stage 2 booted by GHC version 7.4.2
+Using binary package database: /usr/lib/ghc/package.conf.d/package.cache
+Using binary package database: /home/tad/.ghc/x86_64-linux-7.4.2/package.conf.d/package.cache
+Using package config file: dist/package.conf.inplace
+package binary-0.5.1.1-5bb2455adfb020fab4fb74d17537cdf4 is unusable due to missing or recursive dependencies:
+  bytestring-0.10.2.0-dd65ce94c4becc62ba5b14685a741374
+package bmp-1.2.3.2-3d305d2d9d8a0149159082ad0f316855 is unusable due to missing or recursive dependencies:
+  binary-0.5.1.1-5bb2455adfb020fab4fb74d17537cdf4 bytestring-0.10.2.0-dd65ce94c4becc62ba5b14685a741374
+package css-text-0.1.1-10f050abcbd30beb118b10fbb4edefcc is shadowed by package css-text-0.1.1-a995cf629bfaa674ca3150cb53f7059c
+package directory-1.2.0.1-b5f7eb6c2d340c245ae71999d416a08f is unusable due to missing or recursive dependencies:
+  unix-2.6.0.1-5229157fe2b10d2c0f8e4462f199e31f
+package gloss-1.7.7.201204.1-307d53e2a24699d4d1e746dc77cbc2ec is unusable due to missing or recursive dependencies:
+  bmp-1.2.3.2-3d305d2d9d8a0149159082ad0f316855 bytestring-0.10.2.0-dd65ce94c4becc62ba5b14685a741374
+package gloss-raster-1.7.7.201204.1-591315839b05d18e10fd5dc22be3f0c7 is unusable due to missing or recursive dependencies:
+  gloss-1.7.7.201204.1-307d53e2a24699d4d1e746dc77cbc2ec repa-3.2.2.201204.1-7f3df2e3b4d7e7e6078c906ec8bb96d5
+package hmatrix-0.15.0.1-02879cf43b7acb27d05b367b310493cc is unusable due to missing or recursive dependencies:
+  binary-0.5.1.1-5bb2455adfb020fab4fb74d17537cdf4 process-1.1.0.2-204eaa731d214035a62fa08addfb7c19
+package process-1.1.0.2-204eaa731d214035a62fa08addfb7c19 is unusable due to missing or recursive dependencies:
+  directory-1.2.0.1-b5f7eb6c2d340c245ae71999d416a08f unix-2.6.0.1-5229157fe2b10d2c0f8e4462f199e31f
+package repa-3.2.2.201204.1-7f3df2e3b4d7e7e6078c906ec8bb96d5 is unusable due to missing or recursive dependencies:
+  bytestring-0.10.2.0-dd65ce94c4becc62ba5b14685a741374
+package repa-algorithms-3.2.2.201204.1-e7046593e7f4e6dbe2cedb439ae49275 is unusable due to missing or recursive dependencies:
+  repa-3.2.2.201204.1-7f3df2e3b4d7e7e6078c906ec8bb96d5
+package repa-io-3.2.2.201204.1-51fdbc977ef64ac799c4dea5bb4e0773 is unusable due to missing or recursive dependencies:
+  binary-0.5.1.1-5bb2455adfb020fab4fb74d17537cdf4 bmp-1.2.3.2-3d305d2d9d8a0149159082ad0f316855 bytestring-0.10.2.0-dd65ce94c4becc62ba5b14685a741374 repa-3.2.2.201204.1-7f3df2e3b4d7e7e6078c906ec8bb96d5
+package unix-2.6.0.1-5229157fe2b10d2c0f8e4462f199e31f is unusable due to missing or recursive dependencies:
+  bytestring-0.10.2.0-dd65ce94c4becc62ba5b14685a741374
+wired-in package ghc-prim mapped to ghc-prim-0.2.0.0-7d3c2c69a5e8257a04b2c679c40e2fa7
+wired-in package integer-gmp mapped to integer-gmp-0.4.0.0-af3a28fdc4138858e0c7c5ecc2a64f43
+wired-in package base mapped to base-4.5.1.0-6e4c9bdc36eeb9121f27ccbbcb62e3f3
+wired-in package rts mapped to builtin_rts
+wired-in package template-haskell mapped to template-haskell-2.7.0.0-2bd128e15c2d50997ec26a1eaf8b23bf
+wired-in package dph-seq not found.
+wired-in package dph-par not found.
+Hsc static flags: -static
+*** Chasing dependencies:
+Chasing modules from: *examples/example1.hs
+Stable obj: [Main]
+Stable BCO: []
+Ready for upsweep
+  [NONREC
+      ModSummary {
+         ms_hs_date = Wed Oct  2 16:03:11 PDT 2013
+         ms_mod = main:Main,
+         ms_textual_imps = [import (implicit) Prelude,
+                            import Numeric.LinearAlgebra.CHOLMOD.CholmodXFace,
+                            import Numeric.LinearAlgebra.CHOLMOD.CholmodXFaceLow,
+                            import qualified Data.Vector.Storable.Mutable as V,
+                            import Foreign.C.Types, import Foreign]
+         ms_srcimps = []
+      }]
+*** Deleting temp files:
+Deleting: 
+compile: input file examples/example1.hs
+Created temporary directory: /tmp/ghc6962_0
+*** Checking old interface for main:Main:
+Upsweep completely successful.
+*** Deleting temp files:
+Deleting: /tmp/ghc6962_0/ghc6962_0.s
+Warning: deleting non-existent /tmp/ghc6962_0/ghc6962_0.s
+link: linkables are ...
+LinkableM (Wed Oct  2 17:09:53 PDT 2013) main:Main
+   [DotO dist/build/example1/example1-tmp/Main.o]
+*** C Compiler:
+'/usr/bin/gcc' '-fno-stack-protector' '-Wl,--hash-size=31' '-Wl,--reduce-memory-overheads' '-c' '/tmp/ghc6962_0/ghc6962_0.c' '-o' '/tmp/ghc6962_0/ghc6962_0.o' '-DTABLES_NEXT_TO_CODE' '-I/usr/lib/ghc/include'
+*** C Compiler:
+'/usr/bin/gcc' '-fno-stack-protector' '-Wl,--hash-size=31' '-Wl,--reduce-memory-overheads' '-c' '/tmp/ghc6962_0/ghc6962_0.s' '-o' '/tmp/ghc6962_0/ghc6962_1.o' '-DTABLES_NEXT_TO_CODE' '-I/usr/lib/ghc/include'
+*** Linker:
+'/usr/bin/gcc' '-fno-stack-protector' '-Wl,--hash-size=31' '-Wl,--reduce-memory-overheads' '-o' 'dist/build/example1/example1' 'dist/build/example1/example1-tmp/Main.o' '-L/usr/local/lib' '-L/home/tad/code/haskell/hcholmod/dist/build/lib/Numeric/LinearAlgebra/CHOLMOD' '-lcholmod' '-lamd' '-lcolamd' '-lsuitesparseconfig' '-lmetis' '-lccolamd' '-lcamd' '-llapack' '-lblas' '-lcholmod_xface' '-L/home/tad/code/haskell/hcholmod/dist/build' '-L/home/tad/.cabal/lib/vector-0.10.0.1/ghc-7.4.2' '-L/home/tad/.cabal/lib/primitive-0.5.0.1/ghc-7.4.2' '-L/usr/lib/ghc/deepseq-1.3.0.0' '-L/usr/lib/ghc/array-0.4.0.0' '-L/usr/lib/ghc/base-4.5.1.0' '-L/usr/lib/ghc/integer-gmp-0.4.0.0' '-L/usr/lib/ghc/ghc-prim-0.2.0.0' '-L/usr/lib/ghc' '/tmp/ghc6962_0/ghc6962_0.o' '/tmp/ghc6962_0/ghc6962_1.o' '-lHShcholmod-0.1.0.0' '-lHSvector-0.10.0.1' '-lHSprimitive-0.5.0.1' '-lHSdeepseq-1.3.0.0' '-lHSarray-0.4.0.0' '-lHSbase-4.5.1.0' '-lHSinteger-gmp-0.4.0.0' '-lgmp' '-lHSghc-prim-0.2.0.0' '-lHSrts' '-lffi' '-lm' '-lrt' '-ldl' '-u' 'ghczmprim_GHCziTypes_Izh_static_info' '-u' 'ghczmprim_GHCziTypes_Czh_static_info' '-u' 'ghczmprim_GHCziTypes_Fzh_static_info' '-u' 'ghczmprim_GHCziTypes_Dzh_static_info' '-u' 'base_GHCziPtr_Ptr_static_info' '-u' 'base_GHCziWord_Wzh_static_info' '-u' 'base_GHCziInt_I8zh_static_info' '-u' 'base_GHCziInt_I16zh_static_info' '-u' 'base_GHCziInt_I32zh_static_info' '-u' 'base_GHCziInt_I64zh_static_info' '-u' 'base_GHCziWord_W8zh_static_info' '-u' 'base_GHCziWord_W16zh_static_info' '-u' 'base_GHCziWord_W32zh_static_info' '-u' 'base_GHCziWord_W64zh_static_info' '-u' 'base_GHCziStable_StablePtr_static_info' '-u' 'ghczmprim_GHCziTypes_Izh_con_info' '-u' 'ghczmprim_GHCziTypes_Czh_con_info' '-u' 'ghczmprim_GHCziTypes_Fzh_con_info' '-u' 'ghczmprim_GHCziTypes_Dzh_con_info' '-u' 'base_GHCziPtr_Ptr_con_info' '-u' 'base_GHCziPtr_FunPtr_con_info' '-u' 'base_GHCziStable_StablePtr_con_info' '-u' 'ghczmprim_GHCziTypes_False_closure' '-u' 'ghczmprim_GHCziTypes_True_closure' '-u' 'base_GHCziPack_unpackCString_closure' '-u' 'base_GHCziIOziException_stackOverflow_closure' '-u' 'base_GHCziIOziException_heapOverflow_closure' '-u' 'base_ControlziExceptionziBase_nonTermination_closure' '-u' 'base_GHCziIOziException_blockedIndefinitelyOnMVar_closure' '-u' 'base_GHCziIOziException_blockedIndefinitelyOnSTM_closure' '-u' 'base_ControlziExceptionziBase_nestedAtomically_closure' '-u' 'base_GHCziWeak_runFinalizzerBatch_closure' '-u' 'base_GHCziTopHandler_flushStdHandles_closure' '-u' 'base_GHCziTopHandler_runIO_closure' '-u' 'base_GHCziTopHandler_runNonIO_closure' '-u' 'base_GHCziConcziIO_ensureIOManagerIsRunning_closure' '-u' 'base_GHCziConcziSync_runSparks_closure' '-u' 'base_GHCziConcziSignal_runHandlers_closure'
+/home/tad/code/haskell/hcholmod/dist/build/libHShcholmod-0.1.0.0.a(CholmodXFace.o): In function `s3sc_info':
+(.text+0x1498): undefined reference to `cholmod_sdmult'
+/home/tad/code/haskell/hcholmod/dist/build/libHShcholmod-0.1.0.0.a(CholmodXFaceLow.o): In function `s1Ai_info':
+(.text+0x2788): undefined reference to `cholmod_sdmult'
+collect2: error: ld returned 1 exit status
+*** Deleting temp files:
+Deleting: /tmp/ghc6962_0/ghc6962_1.o /tmp/ghc6962_0/ghc6962_0.s /tmp/ghc6962_0/ghc6962_0.o /tmp/ghc6962_0/ghc6962_0.c
+*** Deleting temp dirs:
+Deleting: /tmp/ghc6962_0
