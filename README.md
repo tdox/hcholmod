@@ -34,7 +34,7 @@ with Cabal. (Any tips?) However, you can build and run the
 example with ghc.
 
     $ cd examples
-    $ ./bulid_bash
+    $ ./build_bash
     $ ./example1
     
 Note that hcholmod has an MIT license but CHOLMOD has a GPL 2 license.
