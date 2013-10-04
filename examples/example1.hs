@@ -13,6 +13,8 @@
 -- * base
 import Foreign                                     (ForeignPtr, Storable)
 import Foreign.C.Types                             (CDouble, CInt, CSize)
+
+-- * vector
 import qualified Data.Vector.Storable.Mutable as V
 
 -- * cholmod

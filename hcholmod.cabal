@@ -33,27 +33,28 @@ library
   build-depends:       base   >= 4.5.1.0
                      , vector >= 0.10.0.1
 
-executable example1
-  main-is:             examples/example1.hs
 
-  ghc-options:         -Wall -v
+--executable example1
+--  main-is:             examples/example1.hs
+
+--  ghc-options:         -Wall -v
 
 --  extra-lib-dirs:      /usr/local/lib:/home/tad/code/haskell/hcholmod/dist/build/lib/Numeric/LinearAlgebra/CHOLMOD
 
-  extra-lib-dirs:      /usr/local/lib
+--  extra-lib-dirs:      /usr/local/lib
 
-  extra-libraries:     cholmod
-                     , amd
-                     , colamd
-                     , suitesparseconfig
-                     , metis
-                     , ccolamd
-                     , camd
-                     , lapack
-                     , blas
---                     , cholmod_xface
+--  extra-libraries:     cholmod
+--                     , amd
+--                     , colamd
+--                     , suitesparseconfig
+--                     , metis
+--                     , ccolamd
+--                     , camd
+--                     , lapack
+--                     , blas
 
-  build-depends:       base      >= 4.5.1.0
-                     , hcholmod  >= 0.1.0.0
-                     , vector    >= 0.10.0.1
+
+--  build-depends:       base      >= 4.5.1.0
+--                     , hcholmod  >= 0.1.0.0
+--                     , vector    >= 0.10.0.1
 
