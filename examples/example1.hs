@@ -11,8 +11,8 @@
 {-# LANGUAGE  FlexibleInstances    #-}
 
 -- * base
-import Foreign                                     (ForeignPtr, Storable)
-import Foreign.C.Types                             (CDouble, CInt, CSize)
+import Foreign           (ForeignPtr, Storable)
+import Foreign.C.Types   (CDouble, CInt, CSize)
 
 -- * vector
 import qualified Data.Vector.Storable.Mutable as V
@@ -50,10 +50,19 @@ main = do
   jv <- tripletGetColIndices at :: IO (V.IOVector CInt)
   xt  <- tripletGetX at
 
+
   let nni = fromIntegral nn
 
   let ij      = [(i, j) | i <- [0 .. nni-1], j <- [0 .. i]] :: [(CInt, CInt)]
       (ia,ja) = unzip ij                                    :: ([CInt], [CInt])
+      
+      -- the elements of the matrix are (lower half)
+      --
+      --  11.0
+      --  21.0  22.0
+      --  31.0  32.0  33.0
+      --  41.0  42.0  43.0  44.0
+      --  51.0  52.0  53.0  54.0  55.0
       
       xp = [11, 21, 22, 31, 32, 33, 41, 42, 43, 44, 51, 52, 53, 54, 55]
            :: [CDouble]

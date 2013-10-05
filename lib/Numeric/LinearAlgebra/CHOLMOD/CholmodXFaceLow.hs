@@ -14,7 +14,8 @@
 
 module Numeric.LinearAlgebra.CHOLMOD.CholmodXFaceLow where
 
--- * base
+-- base
+
 import Foreign hiding (free)
 import Foreign.C.Types
 

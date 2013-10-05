@@ -13,16 +13,16 @@
 
 module Numeric.LinearAlgebra.CHOLMOD.CholmodXFace where
 
--- * base
+-- base
 import Foreign.Ptr
 import Foreign.ForeignPtr
 import Foreign.C.Types
 import Foreign.Marshal.Array (withArray)
 
--- * vector
+-- vector
 import qualified Data.Vector.Storable.Mutable as V
 
--- * hcholmod
+-- hcholmod
 import Numeric.LinearAlgebra.CHOLMOD.CholmodXFaceLow
 
 --------------------------------------------------------------------------------
