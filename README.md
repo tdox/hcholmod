@@ -1,7 +1,7 @@
 hcholmod
 ========
 
-hcholmod is a minimal Haskell Foreign Function Interface (FFI) interface to
+hcholmod is a minimal Haskell Foreign Function Interface (FFI) binding to
 [CHOLMOD](http://www.cise.ufl.edu/research/sparse/cholmod), supernodal
 sparse Cholesky factorization and update/downdate.
 
