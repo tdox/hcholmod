@@ -28,13 +28,6 @@ Then do the following in your shell:
     $ cabal build
     $ cabal install --user
     
-So far, there is only one example. Unfortunately, I couldn't figure out how
-to build it
-with Cabal. (Any tips?) However, you can build and run the 
-example with ghc.
-
-    $ cd examples
-    $ ./build_bash
-    $ ./example1
+So far, there is only one example. 
     
 Note that hcholmod has an MIT license but CHOLMOD has a GPL 2 license.
