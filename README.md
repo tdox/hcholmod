@@ -16,6 +16,7 @@ your package manager (e.g., `apt-get install haskell-platform`), or from
 
 You will also have to download and build CHOLMOD.  It may be easier to get all of the dependencies by downloading and buiding [SuiteSparse](http://www.suitesparse.com).
 
+
 hcholmod 0.1.0.0 was built against SuiteSparse 5.8.1.
 
 Then do the following in your shell:
@@ -27,7 +28,14 @@ Then do the following in your shell:
     $ cabal configure
     $ cabal build --extra-lib-dirs=$SUITESPARSE_HOME/lib --extra-include-dirs=$SUITESPARSE_HOME/include
     $ cabal install --user
-    
+
+or on a Mac:
+
+    $ brew install cmake
+    $ brew install metis
+    $ cabal build --extra-include-dirs=/usr/local/include/suitesparse
+    $ cabal run
+
 So far, there is only one example. 
     
 Note that hcholmod has an MIT license but CHOLMOD has a GPL 2 license.

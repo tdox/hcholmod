@@ -8,3 +8,5 @@ dist
 example1
 cabal.project.local
 dist-newstyle
+.stack-work
+.vscode
